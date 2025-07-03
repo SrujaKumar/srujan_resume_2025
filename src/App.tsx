@@ -44,7 +44,7 @@ function App() {
         </ul>
       </section>
       <footer>
-        <a href="#" download>Download Resume</a> | <a href={`mailto:${resumeData.email}`}>Contact Me</a>
+        <a href="/Srujan_Tirunagari.docx" download="Srujan_Tirunagari.docx">Download Resume</a> | <a href={`mailto:${resumeData.email}`}>Contact Me</a>
       </footer>
     </div>
   )
