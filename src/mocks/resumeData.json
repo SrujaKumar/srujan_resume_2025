@@ -1,0 +1,101 @@
+{
+  "name": "Srujan Tirunagari",
+  "email": "srujankt@gmail.com",
+  "phone": "3125985649",
+  "summary": "A Passionate UI Developer having 8+ years of diverse experience in HTML/HTML5, CSS2/3, React.JS, Angular MVC, React Native, Virtual DOM(React), AJAX, DOM, Vanilla JavaScript, Java ES6, JQuery...",
+  "skills": {
+    "frontend": ["HTML/HTML5", "CSS2/3", "JavaScript (ES6/ES7+)", "React.JS", "Angular MVC", "React Native"],
+    "backend": ["Java", "Node.js"],
+    "design": ["Responsive Design", "UI/UX Design Principles"],
+    "versionControl": ["Git", "Bitbucket", "SVN"],
+    "testing": ["Jest", "Enzyme", "React Testing Library"],
+    "dataHandling": ["GraphQL", "Apollo Client"],
+    "other": ["Cross-Browser Compatibility", "Performance Optimization"]
+  },
+  "education": [
+    {
+      "degree": "Masters in Computer Science",
+      "university": "Governor’s State University",
+      "duration": "Aug’ 15 to May’ 17"
+    },
+    {
+      "degree": "Bachelors in Electronic and Communications",
+      "university": "JTNUH",
+      "duration": "Sep’ 10 to May’ 14"
+    }
+  ],
+  "experience": [
+    {
+      "company": "CVS Health",
+      "location": "Remote",
+      "role": "Web Developer",
+      "duration": "Feb 2024 – Current",
+      "project": {
+        "name": "Active Health Digital Application",
+        "summary": "Developed and maintained features for CVS Pharmacy's web-based health management platform including components for care, pricing, benefits, rewards, etc.",
+        "technologies": ["React.js", "Redux", "GraphQL", "Spring Boot", "TypeScript", "Playwright", "Contentful", "JWT", "MongoDB", "MySQL", "Next.js"],
+        "responsibilities": ["Designed reusable React components", "Implemented REST & GraphQL API integration", "Developed authentication with JWT", "Created Playwright framework", "Migrated components to TypeScript"]
+      }
+    },
+    {
+      "company": "Envestnet Inc",
+      "location": "Raleigh, NC",
+      "role": "UI Developer",
+      "duration": "Jan 2022 – Dec 2024",
+      "project": {
+        "name": "Financial Advisory Platform",
+        "summary": "Worked on client identity portal, dashboards, SSO, MFA setup, and report generation for wealth management platform.",
+        "technologies": ["React", "Redux", "Webpack", "Angular", "Docker", "AWS", "Terraform", "Kubernetes", "GraphQL"],
+        "responsibilities": ["Built reusable UI components", "Integrated with backend systems", "Optimized performance for mobile", "Worked with AWS Lambda, CloudWatch", "Collaborated with UX teams"]
+      }
+    },
+    {
+      "company": "Comcast Corporation",
+      "location": "Philadelphia, PA",
+      "role": "React Developer",
+      "duration": "Sep 2020 – Jan 2022",
+      "project": {
+        "name": "Learn Rewrite Project",
+        "summary": "Migrated legacy .NET/SiteCore project to modern stack using React, Redux, TypeScript",
+        "technologies": ["React.js", "Redux Toolkit", "Sitecore", "TypeScript", "Jest", "Enzyme", "Figma", "AWS"],
+        "responsibilities": ["Performed UI development and A11Y testing", "Created reusable components", "Wrote unit tests", "Participated in production support"]
+      }
+    },
+    {
+      "company": "Wells Fargo",
+      "location": "San Francisco, CA",
+      "role": "Frontend Developer",
+      "duration": "Jul 2020 – Aug 2020",
+      "project": {
+        "name": "Search and Locator Applications",
+        "summary": "Supported search and locator modules for desktop and mobile",
+        "technologies": ["React", "Redux", "Bootstrap", "JavaScript", "JIRA"],
+        "responsibilities": ["UI development using React", "Used RESTful APIs", "Handled browser compatibility", "Wrote Jest and RTL unit tests"]
+      }
+    },
+    {
+      "company": "Hilton Corporation",
+      "location": "Memphis, TN",
+      "role": "Full Stack Developer",
+      "duration": "Apr 2018 – Jun 2020",
+      "project": {
+        "name": "Hotel Reservation App",
+        "summary": "Designed cross-platform hotel reservation app using React/Redux/React Native.",
+        "technologies": ["React Native", "Redux", "GraphQL", "Node.js", "Apollo", "Angular", "SQL Server"],
+        "responsibilities": ["Built reusable mobile components", "Integrated GraphQL/Apollo", "Implemented accessibility features", "Developed booking and payment flows"]
+      }
+    },
+    {
+      "company": "IT WorkForce Inc",
+      "location": "Chicago, IL",
+      "role": "Programmer Analyst / Web Developer",
+      "duration": "Sep 2017 – Apr 2018",
+      "project": {
+        "name": "Internal Applications",
+        "summary": "Developed UI and backend services using React, Mule ESB, Spring",
+        "technologies": ["React", "Typescript", "SASS", "Mule ESB", "Spring"],
+        "responsibilities": ["Built single page apps", "Integrated SOAP/REST services", "Involved in backend service creation"]
+      }
+    }
+  ]
+}
