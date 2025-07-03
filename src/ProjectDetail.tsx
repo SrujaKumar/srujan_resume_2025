@@ -1,10 +1,10 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import resumeData from './resumeData';
 
 const ProjectDetail = () => {
   const { index } = useParams<{ index: string }>();
   const exp = resumeData.experience[Number(index)];
-  if (!exp) return <div style={{ padding: 32 }}>Project not found. <Link to="/">Go Home</Link></div>;
+  if (!exp) return <div style={{ padding: 32 }}>Project not found.</div>;
   return (
     <div className="project-detail" style={{ padding: 32 }}>
       <h2>{exp.role} @ {exp.company}</h2>
@@ -15,7 +15,6 @@ const ProjectDetail = () => {
       <ul>
         {exp.project.responsibilities.map((r, i) => <li key={i}>{r}</li>)}
       </ul>
-      <Link to="/" style={{ color: '#3b82f6', textDecoration: 'underline' }}>← Back to Home</Link>
     </div>
   );
 };

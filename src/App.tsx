@@ -8,6 +8,12 @@ import Footer from './Footer'
 import Exercise from './Exercise'
 import BuildOffer from './BuildOffer'
 import ProjectDetail from './ProjectDetail'
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+
+const client = new ApolloClient({
+  uri: 'http://localhost:4000',
+  cache: new InMemoryCache(),
+});
 
 function BackButton() {
   const navigate = useNavigate();
@@ -58,20 +64,22 @@ function Home() {
 
 function App() {
   return (
-    <Router>
-      <div className="portfolio-root" style={{ position: 'relative' }} role="application" aria-label="Portfolio Application">
-        <BackButton />
-        <header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem', marginTop: '0.5rem' }}>
-          <Header />
-        </header>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<main role="main" aria-label="Skills page"><Skills /></main>} />
-          <Route path="/project/:index" element={<main role="main" aria-label="Project detail page"><ProjectDetail /></main>} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ApolloProvider client={client}>
+      <Router>
+        <div className="portfolio-root" style={{ position: 'relative' }} role="application" aria-label="Portfolio Application">
+          <BackButton />
+          <header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem', marginTop: '0.5rem' }}>
+            <Header />
+          </header>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/skills" element={<main role="main" aria-label="Skills page"><Skills /></main>} />
+            <Route path="/project/:index" element={<main role="main" aria-label="Project detail page"><ProjectDetail /></main>} />
+          </Routes>
+          <Footer />
+        </div>
+      </Router>
+    </ApolloProvider>
   )
 }
 

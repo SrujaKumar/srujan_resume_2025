@@ -1,0 +1,11 @@
+{
+  "name": "resume-graphql-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@apollo/client": "^3.13.8",
+    "apollo-server": "^3.12.0",
+    "graphql": "^16.11.0"
+  }
+}
