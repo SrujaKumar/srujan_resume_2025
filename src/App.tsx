@@ -1,4 +1,5 @@
 import './App.css'
+import { BrowserRouter as Router, Routes, Route, Link, useNavigate, useLocation } from 'react-router-dom'
 import Header from './Header'
 import Skills from './Skills'
 import Experience from './Experience'
@@ -6,18 +7,68 @@ import Education from './Education'
 import Footer from './Footer'
 import Exercise from './Exercise'
 import BuildOffer from './BuildOffer'
+import ProjectDetail from './ProjectDetail'
 
-function App() {
+function BackButton() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  if (location.pathname === '/') return null;
   return (
-    <div className="portfolio-root">
+    <button
+      onClick={() => navigate(-1)}
+      style={{
+        position: 'absolute',
+        top: '2rem',
+        left: '2rem',
+        background: '#f3f4f6',
+        color: '#2563eb',
+        border: '1px solid #e5e7eb',
+        borderRadius: '6px',
+        padding: '0.4rem 1.1rem',
+        fontWeight: 600,
+        cursor: 'pointer',
+        fontSize: '1rem',
+        boxShadow: 'none',
+        display: 'inline-block',
+        zIndex: 200
+      }}
+    >
+      ← Back
+    </button>
+  );
+}
+
+function Home() {
+  return (
+    <>
       <Exercise />
-      <Header />
-      <Skills />
+      {/* <Header /> moved to global position */}
+      <div style={{ textAlign: 'right', marginBottom: '1.2rem' }}>
+        <Link to="/skills" style={{ color: '#2563eb', fontWeight: 600, textDecoration: 'underline', fontSize: '1.1rem' }}>View Skills &rarr;</Link>
+      </div>
       <Experience />
       <Education />
       <BuildOffer />
-      <Footer />
-    </div>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <Router>
+      <div className="portfolio-root" style={{ position: 'relative' }}>
+        <BackButton />
+        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem', marginTop: '0.5rem' }}>
+          <Header />
+        </div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/project/:index" element={<ProjectDetail />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

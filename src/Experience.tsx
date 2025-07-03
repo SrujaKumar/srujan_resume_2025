@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import resumeData from './resumeData';
 
@@ -19,12 +20,9 @@ const Experience = () => (
       <div key={idx} className="exp-card">
         <h3>{exp.role} @ {exp.company}</h3>
         <p><em>{exp.location} | {exp.duration}</em></p>
-        <strong>Project:</strong> {exp.project.name}<br/>
-        <span>{exp.project.summary}</span>
-        <div><strong>Technologies:</strong> {exp.project.technologies.join(', ')}</div>
-        <ul>
-          {exp.project.responsibilities.map((r, i) => <li key={i}>{r}</li>)}
-        </ul>
+        <h4 style={{ margin: '0.5rem 0 0.2rem 0', fontWeight: 600 }}>
+          <Link to={`/project/${idx}`}>{exp.project.name}</Link>
+        </h4>
       </div>
     ))}
   </motion.section>

@@ -18,7 +18,12 @@ const Skills = () => (
     <ul className="skills-list">
       {Object.entries(resumeData.skills).map(([category, skills]) => (
         <li key={category}>
-          <strong>{category.charAt(0).toUpperCase() + category.slice(1)}:</strong> {skills.join(', ')}
+          <span className="skills-category">{category.charAt(0).toUpperCase() + category.slice(1)}</span>
+          <div className="skills-tags">
+            {skills.map((skill: string) => (
+              <span className="skills-tag" key={skill}>{skill}</span>
+            ))}
+          </div>
         </li>
       ))}
     </ul>
