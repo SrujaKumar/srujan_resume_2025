@@ -16,6 +16,7 @@ function BackButton() {
   return (
     <button
       onClick={() => navigate(-1)}
+      aria-label="Go back to previous page"
       style={{
         position: 'absolute',
         top: '2rem',
@@ -32,6 +33,8 @@ function BackButton() {
         display: 'inline-block',
         zIndex: 200
       }}
+      tabIndex={0}
+      onKeyDown={e => { if (e.key === 'Enter' || e.key === ' ') navigate(-1); }}
     >
       ← Back
     </button>
@@ -40,31 +43,31 @@ function BackButton() {
 
 function Home() {
   return (
-    <>
+    <main role="main" aria-label="Main content">
       <Exercise />
       {/* <Header /> moved to global position */}
       <div style={{ textAlign: 'right', marginBottom: '1.2rem' }}>
-        <Link to="/skills" style={{ color: '#2563eb', fontWeight: 600, textDecoration: 'underline', fontSize: '1.1rem' }}>View Skills &rarr;</Link>
+        <Link to="/skills" style={{ color: '#2563eb', fontWeight: 600, textDecoration: 'underline', fontSize: '1.1rem' }} aria-label="View Skills page">View Skills &rarr;</Link>
       </div>
       <Experience />
       <Education />
       <BuildOffer />
-    </>
+    </main>
   )
 }
 
 function App() {
   return (
     <Router>
-      <div className="portfolio-root" style={{ position: 'relative' }}>
+      <div className="portfolio-root" style={{ position: 'relative' }} role="application" aria-label="Portfolio Application">
         <BackButton />
-        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem', marginTop: '0.5rem' }}>
+        <header style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '1.5rem', marginTop: '0.5rem' }}>
           <Header />
-        </div>
+        </header>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/skills" element={<Skills />} />
-          <Route path="/project/:index" element={<ProjectDetail />} />
+          <Route path="/skills" element={<main role="main" aria-label="Skills page"><Skills /></main>} />
+          <Route path="/project/:index" element={<main role="main" aria-label="Project detail page"><ProjectDetail /></main>} />
         </Routes>
         <Footer />
       </div>
