@@ -11,7 +11,7 @@ import ProjectDetail from './ProjectDetail'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 
 const client = new ApolloClient({
-  uri: 'https://srujan-resume-2025-2.onrender.com/graphql',
+  uri: 'https://srujan-resume-2025-3.onrender.com/graphql',
   cache: new InMemoryCache(),
 });
 
